@@ -1,21 +1,31 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale" />
         <title>Tlauncher letöltése</title>
-        <link rel="stylesheet" href="index.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="page">
             <h1 align="center">TLAUNCHER LETÖLTÉSE</h1>
-            <div class="container">
-                <a href="https://skyreflect.hu/" align="center">
-                    <button class="button-36" role="button">Letöltés</button>
+            <div class="container" align="center">
+                <a data-href="https://dl2.tlauncher.org/f.php?f=files%2FTLauncher-2.841-Installer-0.9.5.5.exe" align="center">
+                    <button class="button-36 shrink-border" role="button">Letöltés</button>
                 </a>
             </div>
         </div>
+        <script>
+            var aTags = document.querySelectorAll('a[data-href]');
+
+            for(var i = 0; i < aTags.length; i++){
+                var aTag = aTags[i];
+                aTag.addEventListener('click', function(e){
+                var ele = e.target;
+                window.location.replace("https://dl2.tlauncher.org/f.php?f=files%2FTLauncher-2.841-Installer-0.9.5.5.exe");
+                });    
+            }
+        </script>
     </body>
 </html>
